@@ -1,0 +1,709 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: "Space";
+	src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
+// utility class for section separation
+.white-line {
+	border: 1px solid #FFFFFF;
+	margin: 0;
+}
+
+
+body {
+  background-color: #151515;
+  color: #FFFFFF;
+	font-family: "Space";
+	text-align: center;
+}
+
+.bio {
+	padding: 0 9px;
+
+	.tablet-picture {
+		display: none;
+	}
+
+	.desktop-picture {
+		display: none;
+	}
+	
+	nav {
+		margin-top: 30px;
+
+		svg {
+			padding: 0 10px;
+
+			path:hover {
+				cursor: pointer;
+				fill: #4EE1A0;
+			}
+		}
+	}
+
+	> img {
+		width: 60%;
+		margin-top: -100px;
+	}
+
+	p:first-child {
+		font-size: 24px;
+		font-weight: bold;
+		padding-top: 30px;
+	}
+
+	h1 {
+		font-size: 40px;
+		font-weight: bold;
+		margin-top: 40px;
+	}
+
+	p:nth-of-type(2) {
+		font-size: 16px;
+		margin-top: 30px;
+		line-height: 26px;
+	}
+
+	.underline-name {
+		border-bottom: 5px solid #4EE1A0;
+	}
+
+	.underline-contact {
+		margin-top: 20px;
+		margin-bottom: 80px;
+	
+		span {
+			border-bottom: 2px solid #4EE1A0;
+
+			&:hover {
+				color: #4EE1A0;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.experience {
+	h1 {
+		font-size: 32px;
+		margin-top: 30px;
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 16px;
+		margin-top: 10px;
+	}
+
+	div:nth-of-type(6) {
+		margin-bottom: 40px;
+	}
+}
+
+@mixin project-style {
+	img {
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	h2 {
+		font-size: 24px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+
+	.techstack {
+		display: flex;
+		gap: 18px;
+		margin-top: 10px;
+		font-size: 18px;
+	}
+
+	.links {
+		display: flex;
+		width: 70%;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		p {
+			border-bottom: 2px solid #4EE1A0;
+		}
+	}
+}
+
+.projects {
+	margin-top: 40px;
+	text-align: left;
+	padding: 0 15px;
+
+	.small-project-pic {
+		display: inline;
+	}
+
+	.large-project-pic {
+		display: none;
+	}
+
+	h1 {
+		font-size: 40px;
+		font-weight: bold;
+		display: inline-block;
+	}
+
+	.underline-contact {
+		display: inline-block;
+		margin-left: 60px;
+		span {
+			border-bottom: 2px solid #4EE1A0;
+
+			&:hover {
+				color: #4EE1A0;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.project1 {
+		@include project-style;
+	}
+
+	.project2 {
+		@include project-style;
+	}
+
+	.project3 {
+		@include project-style;
+		
+		.techstack {
+			width: 60%;
+		}
+	}
+
+	.project4 {
+		@include project-style;
+		.techstack {
+			width: 60%;
+		}
+	}
+
+	.project5 {
+		@include project-style;
+		.techstack {
+			width: 60%;
+		}
+	}
+
+	.project6 {
+		@include project-style;
+		margin-bottom: 40px;
+		.techstack {
+			width: 60%;
+		}
+	}
+}
+
+.contact {
+	background-color: rgb(37, 36, 36);
+	padding: 60px 16px 0 16px;
+
+	h1 {
+		font-size: 40px;
+		font-weight: bold;
+	}
+
+	> div {
+		p {
+			margin-top: 20px;
+			margin-bottom: 40px;
+			line-height: 26px;
+		}
+	}
+
+	.underline-input {
+		border-bottom: 1px solid #979797;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+
+		input {
+			background: transparent;
+			border: none;
+			margin: 0 0 10px 20px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		input:first-child {
+			&:focus {
+				& + .underline-input {
+					border-bottom: 2px solid #4EE1A0;
+				}
+			}
+		}
+
+		input:nth-of-type(2) {
+			margin-top: 20px;
+
+			&:focus {
+				& + .underline-input {
+					border-bottom: 2px solid #4EE1A0;
+				}
+			}
+		}
+
+		textarea {
+			background: transparent;
+			border: none;
+			resize: none;
+			margin: 20px 0 10px 20px;
+
+			&:focus {
+				outline: none;
+
+				& + .underline-input {
+					border-bottom: 2px solid #4EE1A0;
+				}
+			}
+		}
+
+		textarea::placeholder {
+			font-size: 16px;
+		}
+
+		p {
+			align-self: flex-end;
+			margin-top: 20px;
+			margin-bottom: 80px;
+			.underline-message {
+				border-bottom: 2px solid #4EE1A0;
+				font-weight: bold;
+
+				&:hover {
+					color: #4EE1A0;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: rgb(37, 36, 36);
+	padding-top: 40px;  // use padding due to background color changing if we use margin
+	padding-bottom: 40px;
+
+	h1 {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	nav {
+		margin-top: 20px;
+
+		svg {
+			padding: 0 10px;
+
+			path:hover {
+				cursor: pointer;
+				fill: #4EE1A0;
+			}
+		}
+	}
+}
+
+
+
+// tablet styles
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.bio {
+		text-align: left;
+		padding-right: 0;
+		margin-bottom: 50px;
+		padding-left: 32px;
+		display: grid;
+		grid-template: auto auto auto auto / auto auto;
+
+		.mobile-picture {
+			display: none;
+		}
+
+		.desktop-picture {
+			display: none;
+		}
+
+		p:first-child {
+			font-size: 32px;
+		}
+
+		nav {
+			grid-row: 1 / 2;
+			grid-column: 2 / 2;
+			justify-self: end;
+			padding-right: 29.06px;
+		}
+
+		.tablet-picture {
+			display: inline;
+			grid-row: 1 / 5;
+			grid-column: 2 / -1;
+			z-index: -1;
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 72px;
+			grid-row: 2 / 3;
+			grid-column: 1 / -1;
+			align-self: center;
+			width: 80%;
+		}
+
+		p:nth-of-type(2) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+		.underline-contact {
+			font-size: 16px;
+			grid-row: 4 / 5;
+			align-self: end;
+		}
+	}
+
+	.experience {
+		display: grid;
+		grid-template: auto auto auto / repeat(2, 1fr);
+		justify-items: start;
+		text-align: left;
+		padding-left: 32px;
+		margin-top: 22px;
+	}
+
+	.content {
+		// removes the 2nd white line on tablet view
+		> .white-line:nth-of-type(2) {
+			display: none;
+		}
+	}
+
+	.projects {
+		display: grid;
+		grid-template: auto auto auto auto / repeat(2, 1fr);
+		column-gap: 20px;
+		padding: 0 32px;
+		margin-bottom: 60px;
+
+		.small-project-pic {
+			display: inline;
+		}
+
+		.large-project-pic {
+			display: none;
+		}
+
+		h1 {
+			font-size: 72px;
+		}
+
+		h2 {
+			align-self: center;
+			justify-self: end;
+		}
+	}
+
+	.contact {
+		padding-top: 60px;
+		padding-left: 162px;
+		padding-right: 162px;
+
+		h1 {
+			font-size: 72px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+
+	footer {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		padding-left: 30px;
+		padding-right: 29.51px;
+
+		h1 {
+			justify-self: start;
+			align-self: center;
+		}
+
+		nav {
+			justify-self: end;
+			align-self: center;
+		}
+	}
+}
+
+// desktop styles
+@media only screen and (min-width: 1024px) {
+	.bio {
+		text-align: left;
+		margin-bottom: 50px;
+		display: grid;
+		grid-template: auto auto auto auto / auto auto;
+		padding-left: 165px;
+		padding-right: 156px;
+
+		.mobile-picture {
+			display: none;
+		}
+	
+		.tablet-picture {
+			display: none;
+		}
+	
+		p:first-child {
+			font-size: 32px;
+		}
+
+		nav {
+			grid-row: 1 / 2;
+			grid-column: 2 / -1;
+			justify-self: end;
+			padding-right: 29.51px;
+		}
+
+		.desktop-picture {
+			display: inline;
+			grid-row: 1 / 5;
+			grid-column: 2 / -1;
+			z-index: -1;
+			width: 445px;
+			height: 720px;
+			justify-self: end;
+		}
+
+		h1 {
+			font-size: 88px;
+			grid-row: 2 / 3;
+			grid-column: 1 / -1;
+			align-self: center;
+			width: 60vw;
+		}
+
+		br { display: none; }
+
+		p:nth-of-type(2) {
+			font-size: 18px;
+			align-self: end;
+			width: 445px;
+			line-height: 28px;
+		}
+
+		.underline-contact {
+			font-size: 16px;
+			grid-row: 4 / 5;
+			align-self: end;
+		}
+	}
+
+	.experience {
+		display: grid;
+		grid-template: auto auto / repeat(3, 1fr);
+		justify-content: center;
+		text-align: left;
+		padding: 0 165px;
+		margin: 73px 0 140px 0;
+	}
+
+	.content {
+		// removes the 2nd white line on desktop view
+		> .white-line:nth-of-type(2) {
+			display: none;
+		}
+	}
+
+	.projects {
+		display: grid;
+		grid-template: auto auto auto auto / repeat(2, 1fr);
+		column-gap: 30px;
+		padding-left: 165px;
+		padding-right: 165px;
+
+		.large-project-pic {
+			display: inline;
+
+			&:hover {
+				filter: brightness(50%);
+				-webkit-filter: brightness(50%);
+			}
+		}
+
+		.small-project-pic {
+			display: none;
+		}
+
+		h1 {
+			font-size: 72px;
+		}
+
+		h2 {
+			align-self: center;
+			justify-self: end;
+		}
+
+		@mixin desktop-image-text {
+			position: relative;
+
+			.links { display: none; }
+
+			&:hover {
+				.links {
+					position: absolute;
+					display: block;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					width: 136px;
+	
+					& > * {
+						margin-top: 60px;
+					}
+	
+					& > *:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+
+		.project1 {
+			@include desktop-image-text;
+		}
+
+		.project2 {
+			@include desktop-image-text;
+		}
+
+		.project3 {
+			@include desktop-image-text;
+		}
+
+		.project4 {
+			@include desktop-image-text;
+		}
+
+		.project5 {
+			@include desktop-image-text;
+		}
+
+		.project6 {
+			@include desktop-image-text;
+		}
+	}
+
+	.contact {
+		padding-left: 165px;
+		padding-right: 165px;
+		padding-top: 84px;
+
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		column-gap: 400px;
+
+		> div {
+			text-align: left;
+
+			p {
+				width: 445px;
+				line-height: 28px;
+			}
+		}
+
+		h1 {
+			font-size: 72px;
+		}
+
+		form {
+			input {
+				color: white;
+			}
+	
+			textarea {
+				color: white;
+			}
+		}
+	}
+
+	footer {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		padding-left: 165px;
+		padding-right: 164.51px;
+		font-size: 32px;
+
+		h1 {
+			justify-self: start;
+			align-self: center;
+		}
+
+		nav {
+			justify-self: end;
+			align-self: center;
+		}
+	}
+}
